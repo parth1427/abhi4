@@ -1,0 +1,1414 @@
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 220, 190, 0.10),
+            transparent 45%
+        ),
+        linear-gradient(
+            180deg,
+            #C48670 0%,
+            #B87965 55%,
+            #9F6857 100%
+        );
+
+    color: #F7EDE5;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+.content {
+    width: 100%;
+    padding: 30px;
+}
+
+
+/* Main title */
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+
+    font-size: clamp(4rem, 8vw, 7rem);
+
+    line-height: 0.95;
+
+    color: #FFF4EA;
+
+    margin-bottom: 18px;
+
+    text-shadow:
+        0 3px 12px rgba(60, 30, 20, 0.15);
+
+    animation: titleFloat 4s ease-in-out infinite;
+}
+
+
+/* Shortcake */
+
+.hero h2 {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(1.5rem, 3vw, 2rem);
+
+    font-weight: 500;
+
+    color: #E8B0A1;
+
+    margin-bottom: 30px;
+}
+
+
+/* Intro */
+
+.content p {
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    color: #F0DED3;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+}
+
+
+/* Scroll */
+
+.scroll {
+    margin-top: 65px;
+
+    font-size: 0.95rem;
+
+    color: #EAD5CA;
+
+    opacity: 0.8;
+
+    animation: scrollBounce 2s ease-in-out infinite;
+}
+
+
+/* =========================================
+   HERO ANIMATIONS
+   ========================================= */
+
+@keyframes titleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+
+@keyframes scrollBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(9px);
+    }
+
+}
+
+
+/* =========================================
+   GALLERY
+   ========================================= */
+
+.gallery {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 3200px;
+
+    overflow: hidden;
+
+    padding-bottom: 200px;
+}
+
+
+/* =========================================
+   POLAROIDS
+   ========================================= */
+
+.photo {
+    position: absolute;
+
+    width: 250px;
+
+    padding: 10px;
+
+    background: #F5EEE4;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 18px 35px rgba(50, 25, 20, 0.30);
+
+    opacity: 1;
+
+    filter: none;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+    z-index: 2;
+}
+
+
+.photo.show {
+    opacity: 1;
+
+    filter: blur(0);
+}
+
+
+.photo img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-width: 100%;
+}
+
+
+/* =========================================
+   PHOTO SIZES
+   ========================================= */
+
+.photo1 {
+    width: 280px;
+
+    top: 80px;
+    left: 9%;
+
+    transform: rotate(-7deg);
+}
+
+
+.photo2 {
+    width: 250px;
+
+    top: 280px;
+    right: 10%;
+
+    transform: rotate(6deg);
+}
+
+
+.photo3 {
+    width: 310px;
+
+    top: 500px;
+    left: 20%;
+
+    transform: rotate(4deg);
+}
+
+
+.photo4 {
+    width: 250px;
+
+    top: 730px;
+    right: 18%;
+
+    transform: rotate(-5deg);
+}
+
+
+.photo5 {
+    width: 250px;
+
+    top: 950px;
+    left: 8%;
+
+    transform: rotate(7deg);
+}
+
+
+.photo6 {
+    width: 290px;
+
+    top: 1180px;
+    right: 8%;
+
+    transform: rotate(-6deg);
+}
+
+
+.photo7 {
+    width: 250px;
+
+    top: 1400px;
+    left: 29%;
+
+    transform: rotate(-4deg);
+}
+
+
+.photo8 {
+    width: 320px;
+
+    top: 1630px;
+    right: 11%;
+
+    transform: rotate(5deg);
+}
+
+
+.photo9 {
+    width: 250px;
+
+    top: 1860px;
+    left: 10%;
+
+    transform: rotate(6deg);
+}
+
+
+.photo10 {
+    width: 300px;
+
+    top: 2100px;
+    right: 28%;
+
+    transform: rotate(-5deg);
+}
+
+
+.photo11 {
+    width: 250px;
+
+    top: 2340px;
+    left: 38%;
+
+    transform: rotate(3deg);
+}
+
+
+.photo12 {
+    width: 280px;
+
+    top: 2580px;
+    right: 8%;
+
+    transform: rotate(-5deg);
+}
+
+
+/* =========================================
+   PHOTO HOVER
+   ========================================= */
+
+.photo:hover {
+    z-index: 20;
+
+    transform:
+        scale(1.06)
+        rotate(0deg);
+
+    box-shadow:
+        0 25px 50px rgba(40, 20, 15, 0.45);
+}
+
+
+/* =========================================
+   HANDWRITTEN CAPTIONS
+   ========================================= */
+
+.caption {
+    position: relative;
+
+    display: inline-block;
+
+    width: 100%;
+
+    background: #E8D8C8;
+
+    padding: 7px 10px;
+
+    margin-top: 8px;
+
+    font-family: 'Permanent Marker', cursive;
+
+    font-size: 0.85rem;
+
+    line-height: 1.4;
+
+    color: #49372F;
+
+    text-align: center;
+
+    box-shadow:
+        2px 3px 0 rgba(40, 25, 20, 0.12);
+
+    transform: rotate(-2deg);
+}
+
+
+.photo4 .caption {
+    transform: rotate(2deg);
+}
+
+
+.photo7 .caption {
+    transform: rotate(-3deg);
+}
+
+
+.photo10 .caption {
+    transform: rotate(-3deg);
+}
+
+
+/* =========================================
+   SCRAPBOOK TAPE
+   ========================================= */
+
+.tape {
+    position: absolute;
+
+    width: 85px;
+    height: 25px;
+
+    background: rgba(224, 190, 155, 0.75);
+
+    top: -12px;
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        rotate(-3deg);
+
+    z-index: 5;
+
+    opacity: 0.85;
+
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+
+.photo6 .tape {
+    transform:
+        translateX(-50%)
+        rotate(-6deg);
+}
+
+
+.photo8 .tape {
+    transform:
+        translateX(-50%)
+        rotate(3deg);
+}
+
+
+.photo11 .tape {
+    transform:
+        translateX(-50%)
+        rotate(-4deg);
+}
+
+
+/* =========================================
+   SCRAPBOOK NOTES
+   ========================================= */
+
+.scrap-note {
+    position: absolute;
+
+    font-family: 'Permanent Marker', cursive;
+
+    font-size: 0.9rem;
+
+    color: #F1D9CD;
+
+    opacity: 0.85;
+
+    white-space: nowrap;
+
+    z-index: 3;
+}
+
+
+.note1 {
+    top: 610px;
+
+    right: 12%;
+
+    transform: rotate(-4deg);
+}
+
+
+.note2 {
+    top: 1560px;
+
+    left: 12%;
+
+    transform: rotate(3deg);
+}
+
+
+.note3 {
+    top: 2150px;
+
+    right: 12%;
+
+    transform: rotate(-3deg);
+}
+
+
+/* =========================================
+   DOODLES
+   ========================================= */
+
+.doodle {
+    position: absolute;
+
+    font-size: 2rem;
+
+    color: #E8B0A1;
+
+    opacity: 0.65;
+
+    z-index: 1;
+
+    animation: doodleFloat 4s ease-in-out infinite;
+}
+
+
+.doodle1 {
+    top: 420px;
+    left: 12%;
+
+    transform: rotate(-10deg);
+}
+
+
+.doodle2 {
+    top: 850px;
+    left: 45%;
+
+    transform: rotate(8deg);
+}
+
+
+.doodle3 {
+    top: 1280px;
+    right: 15%;
+
+    transform: rotate(-5deg);
+}
+
+
+.doodle4 {
+    top: 1980px;
+    left: 42%;
+
+    transform: rotate(12deg);
+}
+
+
+@keyframes doodleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(-5deg);
+    }
+
+}
+
+
+/* =========================================
+   90s ARCHIVE LABEL
+   ========================================= */
+
+.archive {
+    position: absolute;
+
+    top: 1120px;
+    left: 42%;
+
+    font-family: monospace;
+
+    font-size: 0.7rem;
+
+    line-height: 1.6;
+
+    letter-spacing: 1px;
+
+    color: #E8CFC4;
+
+    opacity: 0.65;
+
+    transform: rotate(-2deg);
+
+    z-index: 1;
+}
+
+
+.archive span {
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   FINAL MESSAGE
+   ========================================= */
+
+.ending {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 25px;
+}
+
+
+.ending h2 {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    font-weight: 500;
+
+    color: #F5EEE4;
+
+    margin-bottom: 30px;
+}
+
+
+.ending p {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 1rem;
+
+    line-height: 2;
+
+    color: #EAD5CA;
+}
+
+
+.ending-signoff {
+    margin-top: 25px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 1rem;
+
+    color: #E8B0A1;
+}
+
+
+/* =========================================
+   LIGHTBOX
+   ========================================= */
+
+.lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(15, 10, 8, 0.88);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: opacity 0.3s ease;
+
+    z-index: 9990;
+
+    padding: 30px;
+}
+
+
+.lightbox.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+.lightbox img {
+    max-width: 90vw;
+
+    max-height: 90vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border: 10px solid #F5EEE4;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.5);
+
+    transform: scale(0.9);
+
+    transition: transform 0.3s ease;
+}
+
+
+.lightbox.active img {
+    transform: scale(1);
+}
+
+
+/* =========================================
+   RETRO PIXEL CURSOR
+   ========================================= */
+
+body,
+a,
+button,
+.photo {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M3 2v17l5-4 3 7 3-1-3-7h7L3 2z' fill='%23F5EEE4' stroke='%23201815' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E") 3 2, auto;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 100svh;
+    }
+
+
+    .content {
+        padding: 20px;
+    }
+
+
+    h1 {
+        font-size: 4rem;
+    }
+
+
+    .hero h2 {
+        font-size: 1.4rem;
+    }
+
+
+    .content p {
+        font-size: 0.95rem;
+    }
+
+
+    .gallery {
+        min-height: 3000px;
+    }
+
+
+    .photo {
+        width: 180px !important;
+    }
+
+
+    .photo1 {
+        top: 70px;
+        left: 4%;
+    }
+
+
+    .photo2 {
+        top: 270px;
+        right: 4%;
+    }
+
+
+    .photo3 {
+        top: 500px;
+        left: 8%;
+    }
+
+
+    .photo4 {
+        top: 730px;
+        right: 5%;
+    }
+
+
+    .photo5 {
+        top: 970px;
+        left: 4%;
+    }
+
+
+    .photo6 {
+        top: 1200px;
+        right: 4%;
+    }
+
+
+    .photo7 {
+        top: 1430px;
+        left: 18%;
+    }
+
+
+    .photo8 {
+        top: 1660px;
+        right: 4%;
+    }
+
+
+    .photo9 {
+        top: 1900px;
+        left: 4%;
+    }
+
+
+    .photo10 {
+        top: 2140px;
+        right: 12%;
+    }
+
+
+    .photo11 {
+        top: 2380px;
+        left: 12%;
+    }
+
+
+    .photo12 {
+        top: 2620px;
+        right: 5%;
+    }
+
+
+    .scrap-note {
+        font-size: 0.7rem;
+    }
+
+
+    .archive {
+        left: 35%;
+        top: 1100px;
+    }
+
+}
+/* =========================================
+   CUSTOM MUSIC PLAYER
+   ========================================= */
+
+.music-player {
+    width: min(430px, 90vw);
+
+    margin: 35px auto 0;
+
+    padding: 15px 17px;
+
+    background: rgba(35, 22, 18, 0.28);
+
+    border: 1px solid rgba(245, 238, 228, 0.22);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 10px 25px rgba(40, 20, 15, 0.12);
+
+    backdrop-filter: blur(8px);
+
+    transform: none;
+}
+
+
+/* Top row */
+
+.music-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* Little icon */
+
+.music-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #F5EEE4;
+
+    color: #49372F;
+
+    border-radius: 5px;
+
+    font-size: 1.2rem;
+}
+
+
+/* Song information */
+
+.music-info {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: left;
+
+    line-height: 1.3;
+}
+
+
+.music-info span {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    color: #F5EEE4;
+}
+
+
+.music-info small {
+    margin-top: 2px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 0.65rem;
+
+    color: #D9C1B6;
+}
+
+
+/* Play button */
+
+#music-toggle {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #F5EEE4;
+
+    color: #49372F;
+
+    font-size: 0.75rem;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+
+#music-toggle:hover {
+    transform: scale(1.08);
+
+    background: #FFFFFF;
+}
+
+
+/* Progress row */
+
+.music-progress {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+
+.music-progress span {
+    min-width: 30px;
+
+    font-family: monospace;
+
+    font-size: 0.58rem;
+
+    color: #D9C1B6;
+}
+
+
+/* Progress slider */
+
+#music-progress {
+    flex: 1;
+
+    height: 3px;
+
+    appearance: none;
+
+    background: rgba(245, 238, 228, 0.25);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+#music-progress::-webkit-slider-thumb {
+    appearance: none;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #F5EEE4;
+
+    cursor: pointer;
+}
+
+
+#music-progress::-moz-range-thumb {
+    width: 9px;
+    height: 9px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #F5EEE4;
+
+    cursor: pointer;
+}
+/* MUSIC PLAYER FIX */
+
+.music-player {
+    width: min(430px, calc(100vw - 40px)) !important;
+    max-width: 430px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    transform: none !important;
+    overflow: hidden;
+}
+
+.music-top {
+    width: 100%;
+    min-width: 0;
+}
+
+.music-info {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.music-info span,
+.music-info small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.music-progress {
+    width: 100%;
+    min-width: 0;
+}
+
+#music-progress {
+    min-width: 0;
+}
+/* MUSIC PLAYER FIX */
+
+.music-player {
+    width: min(430px, calc(100vw - 40px)) !important;
+    max-width: 430px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    transform: none !important;
+    overflow: hidden;
+}
+
+.music-top {
+    width: 100%;
+    min-width: 0;
+}
+
+.music-info {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.music-info span,
+.music-info small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.music-progress {
+    width: 100%;
+    min-width: 0;
+}
+
+#music-progress {
+    min-width: 2;
+}
+.music-player {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    backdrop-filter: none !important;
+
+    width: min(520px, calc(100vw - 40px)) !important;
+}
+
+.music-top {
+    background: rgba(55, 35, 29, 0.55);
+    border-radius: 8px 8px 0 0;
+    padding: 14px 16px;
+}
+
+.music-progress {
+    background: rgba(55, 35, 29, 0.55);
+    border-radius: 0 0 8px 8px;
+    padding: 0 16px 13px;
+    margin-top: 0;
+}
+
+/* =========================================
+   20TH BIRTHDAY INTERACTION
+   ========================================= */
+
+.twenty {
+    position: relative;
+
+    border: none;
+    background: none;
+
+    font-family: 'Dancing Script', cursive;
+
+    font-size: clamp(6rem, 15vw, 11rem);
+
+    color: #F5EEE4;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.4s ease;
+}
+
+.twenty:hover {
+    transform: scale(1.08) rotate(-3deg);
+}
+
+.twenty span {
+    display: block;
+
+    margin-top: -20px;
+
+    font-family: 'Permanent Marker', cursive;
+
+    font-size: 0.9rem;
+
+    color: #E8B0A1;
+
+    opacity: 0.7;
+}
+
+.twenty.clicked {
+    transform: scale(1.4) rotate(5deg);
+
+    opacity: 0;
+}
+
+.birthday-message {
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.birthday-message.show {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+}
+
+
+/* =========================================
+   MIDNIGHT UNLOCK SCREEN
+   ========================================= */
+
+.unlock-screen {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 220, 190, 0.12),
+            transparent 45%
+        ),
+        #B87965;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+
+.unlock-screen.hidden {
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+
+.unlock-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+.unlock-star {
+    font-size: 1.8rem;
+
+    color: #E8B0A1;
+
+    margin-bottom: 25px;
+
+    animation: unlockFloat 3s ease-in-out infinite;
+}
+
+
+.unlock-label {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    font-weight: 500;
+
+    letter-spacing: 5px;
+
+    color: #F5EEE4;
+}
+
+
+.unlock-subtitle {
+    margin-top: 12px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 0.95rem;
+
+    color: #EAD5CA;
+}
+
+
+.countdown {
+    margin-top: 45px;
+
+    font-family: monospace;
+
+    font-size: clamp(2.5rem, 8vw, 5rem);
+
+    letter-spacing: 6px;
+
+    color: #F5EEE4;
+
+    text-shadow:
+        0 5px 20px rgba(60, 30, 20, 0.18);
+}
+
+
+.unlock-time {
+    margin-top: 12px;
+
+    font-family: monospace;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #D9C1B6;
+}
+
+
+.unlock-button {
+    margin-top: 45px;
+
+    min-width: 130px;
+
+    padding: 12px 22px;
+
+    border: 1px solid rgba(245, 238, 228, 0.35);
+
+    border-radius: 5px;
+
+    background: rgba(55, 35, 29, 0.35);
+
+    color: #F5EEE4;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.unlock-button span {
+    margin-left: 7px;
+}
+
+
+.unlock-button:hover {
+    transform: scale(1.05);
+
+    background: rgba(55, 35, 29, 0.55);
+}
+
+
+.unlock-button.ready {
+    background: #F5EEE4;
+
+    color: #49372F;
+
+    border-color: #F5EEE4;
+}
+
+
+@keyframes unlockFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+}
+.unlock-label.ready {
+    animation: unlockReady 1.5s ease-in-out infinite;
+}
+
+@keyframes unlockReady {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+
+}
